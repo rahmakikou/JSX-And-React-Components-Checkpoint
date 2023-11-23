@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Produit from "./Produit";
+import Name from "./composantes/Name";
+import Description from "./composantes/Description";
+import Price from "./composantes/Price"; 
+import Pic from "./composantes/Pic"; 
+import CardR from "./composantes/Card"; 
+import "./App.css"
+  
 function App() {
+  var name = "parisienne" 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> 
+ <h1 style={{color:"palevioletred",textAlign:"center"}}>La magie de la parfumerie française</h1>
+<div className="carte"> 
+<CardR/> 
+</div> 
+
+<h2 style={{color:"purple", textAlign:"center", fontsize:"large", fontFamily:"fantasy"}}> {name =="" ? "Hello guest!!":`Hello ${name}`}  </h2> 
     </div>
   );
-}
+} 
 
 export default App;
